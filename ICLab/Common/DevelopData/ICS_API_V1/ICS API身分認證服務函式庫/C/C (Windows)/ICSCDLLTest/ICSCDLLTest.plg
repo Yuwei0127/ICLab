@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ICSCDLLTest - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x404 /fo"Release/ICSCDLLTest.res" /d "NDEBUG" "D:\工作區\身份驗證服務及ICS API函式教育訓練\MOICA虛擬化ICS\C語言版\ICSCDLLTest\ICSCDLLTest.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC3.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I ".\INCLUDE" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/ICSCDLLTest.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\工作區\身份驗證服務及ICS API函式教育訓練\MOICA虛擬化ICS\C語言版\ICSCDLLTest\ICSCDLLTest.cpp"
+"D:\工作區\身份驗證服務及ICS API函式教育訓練\MOICA虛擬化ICS\C語言版\ICSCDLLTest\ICSCDLLTestDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC3.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC4.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I ".\INCLUDE" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/ICSCDLLTest.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\工作區\身份驗證服務及ICS API函式教育訓練\MOICA虛擬化ICS\C語言版\ICSCDLLTest\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC4.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC5.tmp" with contents
+[
+WS2_32.LIB wsock32.lib ICSCDLL.lib /nologo /subsystem:windows /incremental:yes /pdb:"Release/ICSCDLLTest.pdb" /machine:I386 /out:"Release/ICSCDLLTest.exe" 
+".\Release\ICSCDLLTest.obj"
+".\Release\ICSCDLLTestDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\ICSCDLLTest.res"
+".\ChtHiSECURE5_CryptoAPIva.lib"
+".\GPKICardFunction.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC5.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ICSCDLLTest.cpp
+ICSCDLLTestDlg.cpp
+Generating Code...
+Linking...
+LINK : LNK6004: Release/ICSCDLLTest.exe not found or not built by the last incremental link; performing full link
+
+
+
+<h3>Results</h3>
+ICSCDLLTest.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

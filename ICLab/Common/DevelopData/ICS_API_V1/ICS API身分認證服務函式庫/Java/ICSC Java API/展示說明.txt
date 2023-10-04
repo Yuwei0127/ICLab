@@ -1,0 +1,32 @@
+
+[Usage] 
+java -cp "not-yet-commons-ssl-0.3.11.jar;ICSCJApi.jar" tw.com.chttl.ics.icscjtest.icscjtest SN PID [proxyIp proxyPort]
+範例：java -cp "not-yet-commons-ssl-0.3.11.jar;ICSCJApi.jar" tw.com.chttl.ics.icscjtest.icscjtest 0000000115959317 G121353503 10.160.3.88 8080
+範例：java -cp "not-yet-commons-ssl-0.3.11.jar;ICSCJApi.jar" tw.com.chttl.ics.icscjtest.icscjtest 0000000111414779 "Y120471621<Birth>19680706</Birth><Phone>0963319997</Phone><Cemail>longlin@cht.com.tw</Cemail><ACode>10003020</ACode>" 10.160.3.88 8080
+
+
+自然人身分確認
+0000000115948071	J222563561
+0000000010184986	L423154314
+0000000115959317	G121353503
+0000000010000774	E200213219
+0000000010184987	B321535173
+0000000115931790	T123650201
+
+0000000010000774	E200213219
+0000000010184987	B321535173
+
+外僑身分確認
+0000000115989242	AC02603968
+0000000115999007	AA70005023
+0000000116001887	BD00611518
+0000000116004340	FC01596825
+0000000116004345	AC02792719
+
+自然人個資確認
+0000000111414779	Y120471621<Birth>19680706</Birth><Phone>0963319997</Phone><Cemail>longlin@cht.com.tw</Cemail><ACode>10003020</ACode>
+0000000111958218	F123284635<Birth>19750608</Birth><Phone>_</Phone><Cemail>_</Cemail><ACode>65000140</ACode>
+0000000114104105	F125372129<Birth>19810924</Birth><Phone>0988678572</Phone><Cemail>_</Cemail><ACode>63000030</ACode>
+0000000112001124	Q220149595<Birth>19721031</Birth><Phone>_</Phone><Cemail>ycpeng@ey.gov.tw</Cemail><ACode>63000050</ACode>
+0000000111968833	S120691352<Birth>19680808</Birth><Phone>0921532562</Phone><Cemail>wdy212@gmail.com</Cemail><ACode>64000052</ACode>
+0000000111823179	T121930920<Birth>19700308</Birth><Phone>_</Phone><Cemail>a2809@ttms.mmh.org.tw</Cemail><ACode>_</ACode>

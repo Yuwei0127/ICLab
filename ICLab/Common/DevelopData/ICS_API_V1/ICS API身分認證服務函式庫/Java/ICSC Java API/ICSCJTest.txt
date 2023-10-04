@@ -1,0 +1,7 @@
+IP		ics-moica.moi.gov.tw
+Port		443
+CGIURL		/cgi-bin/CheckSNPID/CheckSNPID
+ClientCert	.\cert_SHA1.cer
+KeyFile		.\20130108_12345678.p8b
+Password	12345678
+

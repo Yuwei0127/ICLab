@@ -1,0 +1,141 @@
+﻿{
+  "cryptokiVersion": 2.04,
+  "flags": 0,
+  "func": "pkcs11info",
+  "last_error": 0,
+  "libraryDescription": "CHT PKCS#11 3.1.0.00012",
+  "libraryVersion": 3.003,
+  "manufacturerID": "Chunghwa TeleComm TL",
+  "ret_code": 0,
+  "slots": [
+    {
+      "firmwareVersion": 0,
+      "flags": 7,
+      "hardwareVersion": 0,
+      "manufacturerID": "unKnow",
+      "slotDescription": "Generic EMV Smartcard Reader 0",
+      "slotID": 0,
+      "token": {
+        "certs": [
+          {
+            "certb64": "MIIFSzCCAzOgAwIBAgIRALZLiAfiI+7IXBKtpg4GofIwDQYJKoZIhvcNAQELBQAwPzELMAkGA1UEBhMCVFcxMDAuBgNVBAoMJ0dvdmVybm1lbnQgUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0xMjA5MjgwODU4NTFaFw0zNzEyMzExNTU5NTlaMD8xCzAJBgNVBAYTAlRXMTAwLgYDVQQKDCdHb3Zlcm5tZW50IFJvb3QgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQC2/5c8gb4BWCQnr44BK9ZykjAyG1+bfNTUf+ihYHMwVxAA+lCWJP5Q5ow6ldFXeYTVZ1MMKoI+GFy4MCYa1l7GLbIEUQ7v3wxjR+vEEghRK5lxXtVpe+FdyXcdIOxWjuVhYC386RyA3/pqg7sFtR4jEpyCygrzFB0g5AaPQySZn7YKk1pzGxY5vgW28YylZJKPBeRcdvc5w88tvQ7Yy6gOMZvJRg9nU0MEj8iyyIOAX7ryD6uBNaIgIZfOD4k0eA/PH07p+4woPN405+2f0mb1xcoxeNLOUNFggmOd4Ez3B66DNJ1JSUPUfr0t4urHcWWACOQ2nnlwCjyHKenkkpTqBpIpJ3jmrdc96QoLXvTg1oadLXLLi2RW5vSueKWgOTNYPNyoj420ai39iHPplVBzBN8RiD5C1gJ0+yzEb7xs1uCAb9GGpTJXA9ZN9E4KmSJ2fkpAgvjJ5E7LUy3Hsbbi08J1J265DnGyNPy/HE7CPfg26QrMWJqhGIZO4uGqs3NZbl6dtMIIr69c/aQCb/+4DbvVq9dunxpPkUDwH0ZVbaCSw4nNt7H/HLPLo5wK4/7NqrwB7N1UypHdTxOHpPaY7/1J1lcqPKZc9mA3v9g+fk5oKiMyOr5u5CI9ByTPisubXVGzMNJxbc5Gim18SjNE2hIvNkvy6fFRCW3bapcOFwIDAQABo0IwQDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTVZx3gnHosnMvFmOcdByYqhux0zTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQELBQADggIBAJA75cJTQijq9TFOjj2Rnk0J89ixUuZPrAwxIbvx6pnMg/y2KOTshAcOD06Xu29oRo8OURWV+Do7H1+CDgxxDryRT64zLiNB9CZrTxOH+nj2LsIPkQWXqmrBap+8hJ4IKifd2ocXhuGzyl3tOKkpboTeRmv8JxlQpRJ6jH1i/NrnzLyfSa8GuCcn8on3Fj0Y5r3e9YwSkZ/jBI3+BxQaWqw5ghvxOBnhY+OvbLamURfr+kvriyL2l/4QOl+UoEtTcT9a4RD4co+WgN2NApgAYT2NvC2xR8zaXeEgp4wxXPHj2rkKhkfIoT0Hozymc26Uke1uJDr5yTDRB6iBfSZ9fYTfhsmL5a4NHr6JSFEVg5iWL0rrczTXdM3Jb9DCuiv2mv6Z3WAUjhv5nDk8f0OJU+jlwqu+Iq0nOJt3KLejY2OngeepaUXrjnhWzAWEx/uttjB8YwWfLYwkf0uLkvw4Hp+gpVezbp3YZLhwmmBScMip0P/GnO0QYV7Ngw5u6E0CQUridgR51lQ/ipgyFKDdLZznuoJxo4ZVKZnSKdt1OvfbQ/+2W/u3fjWAjg1srnm3Ni2XUqGwB5wH5Ss2zQOXlL0tDjQG/MAWifw3VOTWzz0TBPKR2ck2Lj7FWtClTILD/y58Jnb38/1FoqVuVa4uzM8siTTa9g3nkagQ6hed8vbs",
+            "id": "Uk9PVENBQ2VydA==",
+            "issuerDN": "C=TW,O=Government Root Certification Authority",
+            "label": "ROOT CA Cert",
+            "notAfter": "371231155959Z",
+            "notAfterT": 2145887999,
+            "notBefore": "120928085851Z",
+            "notBeforeT": 1348822731,
+            "signatureAlgorithm": "1.2.840.113549.1.1.11",
+            "sn": "B64B8807E223EEC85C12ADA60E06A1F2",
+            "subjectDN": "C=TW,O=Government Root Certification Authority",
+            "thumbprint": "B091AA913847F313D727BCEFC8179F086F3A8C0F",
+            "usage": "keyCertSign|cRLSign"
+          },
+          {
+            "certb64": "MIIFKDCCAxCgAwIBAgIQUcO1wamhWIYJIiIx1hrArTANBgkqhkiG9w0BAQsFADA/MQswCQYDVQQGEwJUVzEwMC4GA1UECgwnR292ZXJubWVudCBSb290IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTE0MDEwMjA2MzEwNFoXDTM0MDEwMjA2MzEwNFowRzELMAkGA1UEBhMCVFcxEjAQBgNVBAoMCeihjOaUv+mZojEkMCIGA1UECwwb5YWn5pS/6YOo5oaR6K2J566h55CG5Lit5b+DMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn9gInAVVnWPVqzS8XfaF+10vRLo3ulZAI4sAYxrOcFCTNQnQ+bZzb/6iqWgg4fvAxbIbMZfhbQ01eihjledeZEAvN66P/87iSBwiplWESeE1LrKEQkot4ic2F/YKXU9/u2Vk8ek6pQzoxNMNg5BACTYqAWC13VPoGPiPNErxLphj5VJopMgboiCUETh1UYy/TVAZUIHWMKpALi+eqThHJc+oJ1Qju0C715zdnRI3HQYkuFoF9vYiOSLJgVUeqJ538E3z4iuTUZ+jcohxfSFGt4e3hwPVqn/xhn+cYI8gbpxqOfAMLyv/+REKhb8Vwl2uILOKf29aEgJtCKHLxoEpHQIDAQABo4IBFjCCARIwHwYDVR0jBBgwFoAU1Wcd4Jx6LJzLxZjnHQcmKobsdM0wHQYDVR0OBBYEFPqbNGcJCpgi92JIi4ImpkXFwyKkMA4GA1UdDwEB/wQEAwIBBjAUBgNVHSAEDTALMAkGB2CGdmUAAwMwEgYDVR0TAQH/BAgwBgEB/wIBADA+BgNVHR8ENzA1MDOgMaAvhi1odHRwOi8vZ3JjYS5uYXQuZ292LnR3L3JlcG9zaXRvcnkvQ1JMMi9DQS5jcmwwVgYIKwYBBQUHAQEESjBIMEYGCCsGAQUFBzAChjpodHRwOi8vZ3JjYS5uYXQuZ292LnR3L3JlcG9zaXRvcnkvQ2VydHMvSXNzdWVkVG9UaGlzQ0EucDdiMA0GCSqGSIb3DQEBCwUAA4ICAQAYjLOx0ErTqE8Yul0WIRw7yl7UPy23z1xNn2lhs022lpTSWA8ebx3fATUnSPx6oBiGoxG8U/x+NV5DgUy7qenxXHscgOVZVpf7avGcrq8FYrZ0nRGmMCRC30lELnrrH7C9H8YTVZymh2Ovg2jtJHupvmvb43AV9T68T/739lmSkaw7/tu+Ea3Wtxlunzw++5ameC/UZ/1LN0qt/ImKlxBIhXmJbhrHGl20bQp3ZfvGtQ8n03rJtX6dbN2U+JQO4LMcY/3T6Q1sPy2KLA0f2sW4oUM13g8UCIQvhV029DKL3rkDL9xzUHfKBjD9LGDHgdzZ7FszBpFwWEEhsGZx5ZQgFexauozom2lfxSLyZRprWySpMCRlqhU/Vgmx4DwXwWimqH/gtD6cK9+88lcMqhC2d+Jy6D2OrhSbMMW5chfDW6BETxUBXQRBQ6pG8FfWH+f1WN2jytWvymqmvR31e8XsxUa3oOQUTO+NcKBkI3iH7DMR9N5PWwA5OVTrunAl8eC3cb9ZdIG6j27xMjNck46fYAIIp3uqyK1MTC6Z6e8yygL1pSW7/whNWL/4gp0EFyMkx7M1V8QmqYNaeVbRVFjDGZ30qh2Osr4mtEPImvHZFX8Sv0keMYemH9oLqyxYzhsb40XCWNzYC0RS73kTcXATtetNSsXzrxLfbno09jQHsg==",
+            "id": "Q0FDZXJ0",
+            "issuerDN": "C=TW,O=Government Root Certification Authority",
+            "label": "CA Cert",
+            "notAfter": "340102063104Z",
+            "notAfterT": 2019796264,
+            "notBefore": "140102063104Z",
+            "notBeforeT": 1388644264,
+            "signatureAlgorithm": "1.2.840.113549.1.1.11",
+            "sn": "51C3B5C1A9A1588609222231D61AC0AD",
+            "subjectDN": "C=TW,O=行政院,OU=內政部憑證管理中心",
+            "thumbprint": "2797EFFF19EDD77EFD2AFC45E232536614F5BEF0",
+            "usage": "keyCertSign|cRLSign"
+          },
+          {
+            "certb64": "MIIEtTCCA52gAwIBAgIQbF1UmRUbx+oQM+i897vALjANBgkqhkiG9w0BAQsFADBHMQswCQYDVQQGEwJUVzESMBAGA1UECgwJ6KGM5pS/6ZmiMSQwIgYDVQQLDBvlhafmlL/pg6jmhpHorYnnrqHnkIbkuK3lv4MwHhcNMjIxMjMwMDUzNDMzWhcNMjcxMjMwMTU1OTU5WjA8MQswCQYDVQQGEwJUVzESMBAGA1UEAwwJ6Zmz5pyI5qu7MRkwFwYDVQQFExAxNTMxMzAyMjMyNzMwMDUyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzDE2lFEq3UNtrrZYAHX5mg2OggyPl0ta1WL4d+rktnCjqKOP9y1ztpNlQfxZi3QzY3rB9fvAcJ80FFdgNUCvNtD11Tqz699XLKwb5UX37iJ+AicXVT8spup1EHuCI6chQ72BRfSR6Vo5gfIfd5wfKEKkg9mu0Wiri00WFKUhm4T481md7mJCrS1B8v7AUGBlRoBNDmY7NwajW0fWUEdXyCH07OJ/pCbNkd47pOerCB51z8oeoWaFTBDAIu1G/yP+NLpO2oeDJ4hiqmczUA2BwPY/nuCKelnVSc8QlAqSSwkdwpKy7BJsZ3xIfDyjqIYcNMW9Lu1ASwibXblZlck6VwIDAQABo4IBpjCCAaIwHwYDVR0jBBgwFoAU+ps0ZwkKmCL3YkiLgiamRcXDIqQwHQYDVR0OBBYEFFW3uZARohiy+ZyLzdwWPvmzmHV6MA4GA1UdDwEB/wQEAwIHgDAUBgNVHSAEDTALMAkGB2CGdmUAAwMwMwYDVR0JBCwwKjAVBgdghnYBZAIBMQoGCGCGdgFkAwEBMBEGB2CGdgFkAjMxBgwENzM0MjB8BgNVHR8EdTBzMDagNKAyhjBodHRwOi8vb2NzcC1tb2ljYS5tb2kuZ292LnR3L2NybC9NT0lDQS0xMC0zMS5jcmwwOaA3oDWGM2h0dHA6Ly9vY3NwLW1vaWNhLm1vaS5nb3YudHcvY3JsL01PSUNBLWNvbXBsZXRlLmNybDCBhgYIKwYBBQUHAQEEejB4MEcGCCsGAQUFBzAChjtodHRwOi8vbW9pY2EubmF0Lmdvdi50dy9yZXBvc2l0b3J5L0NlcnRzL0lzc3VlZFRvVGhpc0NBLnA3YjAtBggrBgEFBQcwAYYhaHR0cDovL29jc3AtbW9pY2EubW9pLmdvdi50dy9PQ1NQMA0GCSqGSIb3DQEBCwUAA4IBAQAN7uTaGU3AusIBHjUYvXACIQn+HJyFFSRWPEyzBvGZ5Cwy9KA/sbLEkWvnOaUxUtuB7brc6AiA+JPBQSILs69rWSFpfamR2jYmc+btIrxMJWZoT03AF0Yetis3aCxJB2m00kQM5aIyYqbrG/LIq4PWB+ltfxjXkiQ1QgBhcCyfD51+cHChCYmgzRDf92fIgzW8KJzw1erOX1wY6ynlg0H8A2ghh4F/lJ4GhLmP9auDF90urWtTR1R8l9tro8CIK2F1O+Rz24k2daE7VC8+oz98UcD924ok7IZb5Q4lNk/OXo3YI9450fO4uvJRY+1JX4QZOJJtqn2mATqa5yNpBeGR",
+            "id": "U0lHTg==",
+            "issuerDN": "C=TW,O=行政院,OU=內政部憑證管理中心",
+            "label": "cert1",
+            "notAfter": "271230155959Z",
+            "notAfterT": 1830182399,
+            "notBefore": "221230053433Z",
+            "notBeforeT": 1672378473,
+            "signatureAlgorithm": "1.2.840.113549.1.1.11",
+            "sn": "6C5D5499151BC7EA1033E8BCF7BBC02E",
+            "subjectCN": "陳月櫻",
+            "subjectDN": "C=TW,CN=陳月櫻,serialNumber=1531302232730052",
+            "subjectID": "7342",
+            "thumbprint": "1C6750177E3BB860C1E2B55B635AE48ED00096FE", // 指紋識別碼
+            "usage": "digitalSignature"
+          },
+          {
+            "certb64": "MIIEtTCCA52gAwIBAgIQL/KmC1qWr8Lemfg5XQkgkzANBgkqhkiG9w0BAQsFADBHMQswCQYDVQQGEwJUVzESMBAGA1UECgwJ6KGM5pS/6ZmiMSQwIgYDVQQLDBvlhafmlL/pg6jmhpHorYnnrqHnkIbkuK3lv4MwHhcNMjIxMjMwMDUzNDMzWhcNMjcxMjMwMTU1OTU5WjA8MQswCQYDVQQGEwJUVzESMBAGA1UEAwwJ6Zmz5pyI5qu7MRkwFwYDVQQFExAxNTMxMzAyMjMyNzMwMDUyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkF7YGh3/bZicpcdNSKGphSI9vJkK6UW2xg1Y/biIR1Ej/XbtFUMlTSu4sNxmUUGhjMPgCpsl/gn8J8eZFuP0u2DoYTgOIK2naWtW83+mgDak8ymJ61BhVEJS8W6S6NKJEpKX0tm71bT+rgLO4joa4isafCmESvYExU3yZdgGIeMMieki+84Q4OZvvdk0PBTNrZ+A+sL/On3aOelkNWBJbhjjQihbASQ/m6pmUrUYHnGLYb95JNcV3X28Upnv4Uf6uYaU9fBgIuvr/yfx8fImOpUx0YRgp3a0YZb0NI4GqIEsJv+TCLZYYFF6ZHeWlcKQimAaIXSG8tBD6ii+mSOlxQIDAQABo4IBpjCCAaIwHwYDVR0jBBgwFoAU+ps0ZwkKmCL3YkiLgiamRcXDIqQwHQYDVR0OBBYEFN+E7utPzAZbe5ot5Q6IPiiKRWu/MA4GA1UdDwEB/wQEAwIEMDAUBgNVHSAEDTALMAkGB2CGdmUAAwMwMwYDVR0JBCwwKjAVBgdghnYBZAIBMQoGCGCGdgFkAwEBMBEGB2CGdgFkAjMxBgwENzM0MjB8BgNVHR8EdTBzMDagNKAyhjBodHRwOi8vb2NzcC1tb2ljYS5tb2kuZ292LnR3L2NybC9NT0lDQS0xMC0zMS5jcmwwOaA3oDWGM2h0dHA6Ly9vY3NwLW1vaWNhLm1vaS5nb3YudHcvY3JsL01PSUNBLWNvbXBsZXRlLmNybDCBhgYIKwYBBQUHAQEEejB4MEcGCCsGAQUFBzAChjtodHRwOi8vbW9pY2EubmF0Lmdvdi50dy9yZXBvc2l0b3J5L0NlcnRzL0lzc3VlZFRvVGhpc0NBLnA3YjAtBggrBgEFBQcwAYYhaHR0cDovL29jc3AtbW9pY2EubW9pLmdvdi50dy9PQ1NQMA0GCSqGSIb3DQEBCwUAA4IBAQCb+s17pmIt4ltxUWMc8NrPgImO3d48qUHhT75hNXRdHFQSvDesBVVV1lNMC6o6aIGOw/uo7k9Z7iiSphZTC1n7gXcLqi68E8Kbmfr6vRMZwZ80mKhIamiEQBXqyTgtAVpH1yyWQiPjMFpscmgLPyRWgzusdmmZtqj0HOy3+0u3uac4MnLBROg4hFBPOfTiSe9aiqQtKejzNypnqnP276k3X1ZAfdJLMQKDx6zOldpAYbboF+gZvD2LAhfc700CZ8DrU91YuqEy5eN5kYwDirwK60+9kH6iwSBTOx3MN88+CM7GrAiCv45l6tphPqh3mBria5OFpE/Sp9O9Iog5usBu",
+            "id": "S0VZWA==",
+            "issuerDN": "C=TW,O=行政院,OU=內政部憑證管理中心",
+            "label": "cert2",
+            "notAfter": "271230155959Z",
+            "notAfterT": 1830182399,
+            "notBefore": "221230053433Z",
+            "notBeforeT": 1672378473,
+            "signatureAlgorithm": "1.2.840.113549.1.1.11",
+            "sn": "2FF2A60B5A96AFC2DE99F8395D092093",
+            "subjectCN": "陳月櫻",
+            "subjectDN": "C=TW,CN=陳月櫻,serialNumber=1531302232730052",
+            "subjectID": "7342",
+            "thumbprint": "8E84A5A4098A116F69A0D01BA0B02359B9F48CD6", // 指紋識別碼
+            "usage": "keyEncipherment|dataEncipherment"
+          }
+        ],
+        "firmwareVersion": 1,
+        "flags": 1037,
+        "hardwareVersion": 1,
+        "keys": [
+          {
+            "id": "U0lHTg==",
+            "keyb64": "MIIBCgKCAQEAzDE2lFEq3UNtrrZYAHX5mg2OggyPl0ta1WL4d+rktnCjqKOP9y1ztpNlQfxZi3QzY3rB9fvAcJ80FFdgNUCvNtD11Tqz699XLKwb5UX37iJ+AicXVT8spup1EHuCI6chQ72BRfSR6Vo5gfIfd5wfKEKkg9mu0Wiri00WFKUhm4T481md7mJCrS1B8v7AUGBlRoBNDmY7NwajW0fWUEdXyCH07OJ/pCbNkd47pOerCB51z8oeoWaFTBDAIu1G/yP+NLpO2oeDJ4hiqmczUA2BwPY/nuCKelnVSc8QlAqSSwkdwpKy7BJsZ3xIfDyjqIYcNMW9Lu1ASwibXblZlck6VwIDAQAB",
+            "label": "k1",
+            "type": 0
+          },
+          {
+            "id": "S0VZWA==",
+            "keyb64": "MIIBCgKCAQEAkF7YGh3/bZicpcdNSKGphSI9vJkK6UW2xg1Y/biIR1Ej/XbtFUMlTSu4sNxmUUGhjMPgCpsl/gn8J8eZFuP0u2DoYTgOIK2naWtW83+mgDak8ymJ61BhVEJS8W6S6NKJEpKX0tm71bT+rgLO4joa4isafCmESvYExU3yZdgGIeMMieki+84Q4OZvvdk0PBTNrZ+A+sL/On3aOelkNWBJbhjjQihbASQ/m6pmUrUYHnGLYb95JNcV3X28Upnv4Uf6uYaU9fBgIuvr/yfx8fImOpUx0YRgp3a0YZb0NI4GqIEsJv+TCLZYYFF6ZHeWlcKQimAaIXSG8tBD6ii+mSOlxQIDAQAB",
+            "label": "k1",
+            "type": 0
+          },
+          {
+            "id": "U0lHTjAy",
+            "keyb64": "MIIBCgKCAQEA1ONlj/nY2VnIeAmnAtRMYorNOG21FRFsKIbbqzq99Fbp2mXNKz2BZkm6lEvNVIx+kK+YZho2fIdMzZ7hDOIW52IYKgSm9BBzCZbW+eSEQImkoBqMdYhiTea9xH4KxnFhbUNElCLKyN3sLOyPtztKxN4c7wX8gEMHRvrnnrOMMB4F+jYo/fVLftOh5k4ZjEDUzAOrvjvZdO7xKpm1mRlqrRsYChpHfEsaW5+coQ5QaxtmqQpzUsEhylJd5m8biiu0Vvzmo6pWh3yMbsCp+rol+a/2OKfPHIUjuQW5kPFhA65JqIKdI8PLpC/FEPNPA9ARWT7dJEJ8ucqpROzaRNgWuQIDAQAB",
+            "label": "k3",
+            "type": 0
+          }
+        ],
+        "label": "HiCOS PKI Smart Card",
+        "manufacturerID": "Chunghwa TeleCom Co., Ltd.",
+        "model": "T7S056441285945",
+        "serialNumber": "TP07220926197458",
+        "ulFreePrivateMemory": 4294967295,
+        "ulFreePublicMemory": 4294967295,
+        "ulMaxPinLen": 8,
+        "ulMaxRwSessionCount": 0,
+        "ulMaxSessionCount": 0,
+        "ulMinPinLen": 6,
+        "ulSessionCount": 0,
+        "ulTotalPrivateMemory": 4294967295,
+        "ulTotalPublicMemory": 4294967295,
+        "utcTime": ""
+      }
+    }
+  ],
+  "version": "2.3.3",
+  "serverVersion": "1.3.4.103346",
+  "installedModule": [
+    {
+      "version": "1.1.9",
+      "description": "CardManagement"
+    },
+    {
+      "version": "1.3.4.103346",
+      "description": "HiPKILocalSignServer"
+    },
+    {
+      "version": "1.1.1",
+      "description": "PrintCard"
+    }
+  ]
+}

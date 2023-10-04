@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML>
+<HTML><HEAD>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" charset="utf-8"/> 
+<script type="text/javascript" src="errorcode.js"></script>
+<SCRIPT type="text/javascript">
+var postTarget;
+var timeoutId;
+function postData(target,data)
+{
+	if(!http.sendRequest)
+	{
+		return null;
+	}
+	http.url=target;
+	http.actionMethod="POST";
+	var code=http.sendRequest(data);
+	if(code!=0) return null;
+	return http.responseText;
+
+}
+function checkFinish(){
+	if(postTarget){
+		postTarget.close();
+		alert("尚未安裝元件");
+	}
+}
+function makeSignature()
+{
+    var ua = window.navigator.userAgent;
+	if(ua.indexOf("MSIE")!=-1 || ua.indexOf("Trident")!=-1) //is IE, use ActiveX
+	{
+		postTarget=window.open("waiting.htm?簽章中", "Signing","height=200, width=200, left=100, top=20");
+		var tbsPackage=getTbsPackage();
+		document.getElementById("httpObject").innerHTML='<OBJECT id="http" width=1 height=1 style="LEFT: 1px; TOP: 1px" type="application/x-httpcomponent" VIEWASTEXT></OBJECT>';
+		var data=postData("http://localhost:61161/sign","tbsPackage="+tbsPackage);
+		postTarget.close();
+		postTarget=null;
+		if(!data) alert("尚未安裝元件");
+		else setSignature(data);
+	}
+	else{
+		postTarget=window.open("http://localhost:61161/popupForm", "簽章中","height=200, width=200, left=100, top=20");
+		timeoutId=setTimeout(checkFinish,3500);
+	}
+}
+
+function getTbsPackage(){
+	var tbsData = {};
+	tbsData["tbs"]=document.getElementById("tbs").value; 						//Base64 做RAW資料
+	tbsData["tbsEncoding"]=document.getElementById("tbsEncoding").value;		
+	//tbsData["hashAlgorithm"]=document.getElementById("hashAlgorithm").value; 	
+	tbsData["pin"]=encodeURIComponent(document.getElementById("pin").value);
+	tbsData["func"]="MakeSignature";
+	tbsData["signatureType"]="RAW"; //RAW
+	var json = JSON.stringify(tbsData);
+	return json;
+}
+function setSignature(signature)
+{
+	var ret=JSON.parse(signature);
+	document.getElementById("b64Signature").value=ret.signature;
+	document.getElementById("b64Cert").value=ret.certb64;
+	document.getElementById("returnCode").value=ret.ret_code;
+	if(ret.ret_code!=0){
+		alert(MajorErrorReason(ret.ret_code));
+		if(ret.last_error)
+			alert(MinorErrorReason(ret.last_error));
+	}
+}
+
+function receiveMessage(event)
+{
+	if(console) console.debug(event);
+	
+	//安全起見，這邊應填入網站位址檢查
+	if(event.origin!="http://localhost:61161")
+		return;
+	try{
+		var ret = JSON.parse(event.data);
+		if(ret.func){
+			if(ret.func=="getTbs"){
+				clearTimeout(timeoutId);
+				var json=getTbsPackage()
+				postTarget.postMessage(json,"*");
+			}else if(ret.func=="sign"){
+				setSignature(event.data);
+			}
+		}else{
+			if(console) console.error("no func");
+		}
+	}catch(e){
+		//errorhandle
+		if(console) console.error(e);
+	}
+}
+if (window.addEventListener) {
+	window.addEventListener("message", receiveMessage, false);
+	}else {
+	//for IE8
+		window.attachEvent("onmessage", receiveMessage);
+	}
+	//for IE8
+var console=console||{"log":function(){}, "debug":function(){}, "error":function(){}};
+</SCRIPT> 
+</HEAD> 
+<BODY>
+<span id="httpObject" ></span>
+<H1>RAW簽章範例</H1>
+<br/>
+以此本範例網頁做簽章結果會和PKCS1(SHA1)簽章結果一樣
+<br/>
+<BR>tbs:<INPUT name="tbs" id="tbs" size=80 value="MCEwCQYFKw4DAhoFAAQU52AqDFox+uJOPeG8gd86df9UY3g="> (輸入格式請先參考下面說明)<BR><BR>
+tbsEncoding: <SELECT name="tbsEncoding" id="tbsEncoding"><OPTION value="base64" >base64</OPTION>	   </SELECT><BR>
+簽章值：<br/> 
+<TEXTAREA name="b64Signature" readonly="true" id="b64Signature" rows="8" cols="65"></TEXTAREA><br/>
+憑證：<br/>
+<TEXTAREA name="b64Cert" readonly="true" id="b64Cert" rows="8" cols="65"></TEXTAREA><br/>
+returnCode:<input type="text" name="returnCode" id="returnCode"/><br/>
+</FORM>
+pin: <INPUT name="pin" id="pin" type="password" value="12345678"><BR>
+<INPUT id="MakeSignature" type="button" value="簽章" onclick="makeSignature()">
+<br/>
+<br/>
+<B>*輸入說明和範例：</B><br/>
+請先將待簽章資料做SHA1 Hash後，<B>在其Uint8 Byte Array格式的開頭加入下述prefix</B>，然後做Base64，最後以此Base64字串作為輸入內容<br/>
+[0x30, 0x21, 0x30, 0x09, 0x06, 0x05, 0x2b, 0x0e, 0x03, 0x02, 0x1a, 0x05, 0x00, 0x04, 0x14]
+<br/>
+例如: 文字字串TBS轉換後的Base64輸入字串是MCEwCQYFKw4DAhoFAAQU52AqDFox+uJOPeG8gd86df9UY3g=
+<br/>
+
+
+
+</BODY></HTML>

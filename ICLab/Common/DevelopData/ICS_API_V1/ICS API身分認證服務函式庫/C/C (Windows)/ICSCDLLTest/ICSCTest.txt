@@ -1,0 +1,9 @@
+Signature	HiSecure
+IP		ics-moica.moi.gov.tw
+Port		443
+ServerCA	GTLSCA.pem
+CGIURL		/cgi-bin/CheckSNPID/CheckSNPID
+ClientCert	cert_SHA1.cer
+KeyFile		20130108_12345678.pfx
+Password	12345678
+

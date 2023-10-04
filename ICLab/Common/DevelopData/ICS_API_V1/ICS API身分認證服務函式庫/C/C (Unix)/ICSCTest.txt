@@ -1,0 +1,8 @@
+Signature	OpenSSL
+IP		ics-moica.moi.gov.tw
+Port		443
+ServerCA	GTLSCA.pem
+CGIURL		/cgi-bin/CheckSNPID/CheckSNPID
+ClientCert	cert3045.cer
+KeyFile		key3045.pem
+Password	NONE

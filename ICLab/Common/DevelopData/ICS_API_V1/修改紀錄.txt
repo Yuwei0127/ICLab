@@ -1,0 +1,15 @@
+20200714 版本: 1
+將C資料夾底下檔案異動說明:
+1.移除原本檔案 GCA.cer和 GCA.pem 和 GCA2.cer 和 GTestCA.pem 和 GTestCA.cer 
+2.新增 GTLSCA.pem 和 GTLSCA.crt
+3.修改內容ICSCTest.txt 
+   a.原本IP是61.60.9.50 改成 ics-moica.moi.gov.tw
+   b.原本ServerCA是GCA.pem 改成 GTLSCA.pem
+4.修改C語言使用手冊說明
+
+將Java資料夾底下檔案異動說明:
+1.移除原本檔案 GCA2.cer 
+2.新增 GTLSCA.cre
+3.修改內容ICSCJTest.txt
+  a.原本IP是61.60.9.50 改成 ics-moica.moi.gov.tw
+4.修改JAVA語言使用手冊說明

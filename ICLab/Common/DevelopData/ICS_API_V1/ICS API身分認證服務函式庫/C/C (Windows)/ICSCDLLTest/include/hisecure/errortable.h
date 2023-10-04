@@ -1,0 +1,438 @@
+#ifndef __HISECUREERRORTABLE_H__
+#define __HISECUREERRORTABLE_H__
+
+#define Buffer_Too_Small			0xDA010001
+
+#define	HISECURECRYPTOAPI			0xDB000000
+#define HISECUREPARSING				0xDC000000	
+#define HISECURENETFUNC				0xDD000000	
+
+#define	CHTIN						0x00010000
+#define	CHTINOUT					0x00020000
+#define	PROGRAM						0x00030000
+#define	SYSTEM						0x00040000
+#define	GETDETAIL					0x00050000
+
+#define	LENGTH						0x00000100
+#define	POINTER						0x00000200
+#define	NULLPOINTER					0x00000300
+#define	OBJECTID					0x00000400
+#define	FORMAT						0x00000500
+#define CERTREVOKLIST				0x00000600
+#define	TRANSFORM					0x00000700
+#define	COUNT						0x00000800
+
+
+#define UNSUPPORT					0x00001100
+#define	ICCARD						0x00001200
+#define	SAFEGUARD					0x00001300
+#define	KEYOBJECT					0x00001400
+#define	FUNCTIONFAIL				0x00001500
+#define	PROCESS						0x00001600
+
+
+// Netfunc 相關	0xDD000000
+// Input		0xDD010000
+// In/Out		0xDD020000
+// Program		0xDD030000
+// GetDetail	0xDD040000
+// Transform	0xDD000700
+
+//Length Error
+#define TbsRequestSignatureLength_Less_Than_Zero	0xDD010101	//	(HISECURENETFUNC | CHTIN | LENGTH | 0x01)
+
+
+
+
+// Parsing 相關	0xDC000000
+// Input		0xDC010000
+// In/Out		0xDC020000
+// Program		0xDC030000
+// GetDetail	0xDC040000
+// Transform	0xDC000700
+
+
+//Length Error
+#define Cert_Length_Error							0xDC010101	//	(HISECUREPARSING | CHTIN | LENGTH | 0x01)
+#define	Cert_Signature_Length_Error					0xDC010102	//	(HISECUREPARSING | CHTIN | LENGTH | 0x02)
+#define Cert_SignatureAlgorithm_Length_Error		0xDC010103	//	(HISECUREPARSING | CHTIN | LENGTH | 0x03)
+#define tbsCert_Length_Error						0xDC010104	//	(HISECUREPARSING | CHTIN | LENGTH | 0x04)
+
+#define	CACert_Length_Error							0xDC010111	//	(HISECUREPARSING | CHTIN | LENGTH | 0x11)
+#define	CACert_Signature_Length_Error				0xDC010112	//	(HISECUREPARSING | CHTIN | LENGTH | 0x12)
+#define CACert_SignatureAlgorithm_Length_Error		0xDC010113	//	(HISECUREPARSING | CHTIN | LENGTH | 0x13)
+#define tbsCACert_Length_Error						0xDC010114	//	(HISECUREPARSING | CHTIN | LENGTH | 0x14)
+
+#define CRL_Length_Error							0xDC010121	//	(HISECUREPARSING | CHTIN | LENGTH | 0x21)
+#define	CRL_Signature_Length_Error					0xDC010122	//	(HISECUREPARSING | CHTIN | LENGTH | 0x22)
+#define	CRL_SignatureAlgorithm_Length_Error			0xDC010123	//	(HISECUREPARSING | CHTIN | LENGTH | 0x23)
+#define	tbsCRL_Length_Error							0xDC010124	//	(HISECUREPARSING | CHTIN | LENGTH | 0x24)
+
+#define SubExten_OID_Length_Error					0xDC010131	//	(HISECUREPARSING | CHTIN | LENGTH | 0x31)
+#define	SDA_OID_Length_Error						0xDC010132	//	(HISECUREPARSING | CHTIN | LENGTH | 0x32)
+#define	DerCode_Data_Length_Error					0xDC010133	//	(HISECUREPARSING | CHTIN | LENGTH | 0x33)
+#define	Extension_Length_Error						0xDC010134	//	(HISECUREPARSING | CHTIN | LENGTH | 0x34)
+#define	SubExtension_Length_Error					0xDC010135	//	(HISECUREPARSING | CHTIN | LENGTH | 0x35)
+#define	OID_Length_Error							0xDC010136	//	(HISECUREPARSING | CHTIN | LENGTH | 0x36)
+
+
+//Pointer Error
+#define	Uninitialized_Pointer_Of_Cert				0xDC010201	//	(HISECUREPARSING | CHTIN | POINTER | 0x01)	
+#define	Uninitialized_Pointer_Of_CRL				0xDC010202	//	(HISECUREPARSING | CHTIN | POINTER | 0x02)
+#define	Uninitialized_Pointer_Of_Key				0xDC010203	//	(HISECUREPARSING | CHTIN | POINTER | 0x03)
+#define	Uninitialized_Pointer_In_CertStruct			0xDC010204	//	(HISECUREPARSING | CHTIN | POINTER | 0x04)
+#define	Uninitialized_Pointer_In_CRLStruct			0xDC010205	//	(HISECUREPARSING | CHTIN | POINTER | 0x05)
+#define	Uninitialized_Pointer_Of_SerialNumber		0xDC010206	//	(HISECUREPARSING | CHTIN | POINTER | 0x06)
+#define	Uninitialized_Pointer_Of_DN					0xDC010207	//	(HISECUREPARSING | CHTIN | POINTER | 0x07)
+#define	Uninitialized_Pointer_Of_RDN				0xDC010208	//	(HISECUREPARSING | CHTIN | POINTER | 0x08)
+#define	Uninitialized_Pointer_Of_Extension			0xDC010209	//	(HISECUREPARSING | CHTIN | POINTER | 0x09)
+#define	Uninitialized_Pointer_Of_SubExtension		0xDC01020A	//	(HISECUREPARSING | CHTIN | POINTER | 0x0A)
+#define	Uninitialized_Pointer_Of_OID				0xDC01020B	//	(HISECUREPARSING | CHTIN | POINTER | 0x0B)
+#define	Uninitialized_Pointer_Of_DerCodeData		0xDC01020C	//	(HISECUREPARSING | CHTIN | POINTER | 0x0C)
+
+
+//NULL Pointer Error
+#define NULL_Pointer_To_Cert						0xDC010301	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x01)
+#define	NULL_Pointer_To_CRL							0xDC010302	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x02)
+#define	NULL_Pointer_To_ModuleHandle				0xDC010303	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x03)
+#define	NULL_Pointer_To_Key							0xDC010304	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x04)
+#define	NULL_Pointer_To_DN							0xDC010305	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x05)
+#define	NULL_Pointer_To_RDN							0xDC010306	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x06)
+#define	NULL_Pointer_To_Extension					0xDC010307	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x07)
+#define	NULL_Pointer_To_OID							0xDC010308	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x08)
+#define	NULL_Pointer_To_SubExtension				0xDC010309	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x09)
+#define	NULL_Pointer_To_SerialNumber				0xDC01030A	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x0A)
+#define	NULL_Pointer_To_DerCodeData					0xDC01030B	//	(HISECUREPARSING | CHTIN | NULLPOINTER | 0x0B)
+
+
+//OID Error
+#define	SDA_OID_Error								0xDC010401	//	(HISECUREPARSING | CHTIN | OBJECTID | 0x01)
+#define	SubExten_OID_Error							0xDC010402	//	(HISECUREPARSING | CHTIN | OBJECTID | 0x02)
+#define No_Such_OID_In_Extension					0xDC010403	//	(HISECUREPARSING | CHTIN | OBJECTID | 0x03)
+#define	No_Such_OID_In_SubExtension					0xDC010404	//	(HISECUREPARSING | CHTIN | OBJECTID | 0x04)
+
+
+//Format Error
+#define	Cert_Format_Error							0xDC010501	//	(HISECUREPARSING | CHTIN | FORMAT | 0x01)
+#define	tbsCert_Format_Error						0xDC010502	//	(HISECUREPARSING | CHTIN | FORMAT | 0x02)
+#define	CertList_Format_Error						0xDC010503	//	(HISECUREPARSING | CHTIN | FORMAT | 0x03)
+
+#define Function_Not_Support_This_Certificate		0xDC010511	//	(HISECUREPARSING | CHTIN | FORMAT | 0x11)
+
+//CRL Error
+#define	DeltaCRL_thisUpdate_Invalid					0xDC010601	//	(HISECUREPARSING | CHTIN | CERTREVOKLIST | 0x01)
+#define	DeltaCRL_nextUpdate_Invalid					0xDC010602	//	(HISECUREPARSING | CHTIN | CERTREVOKLIST | 0x02)
+#define	No_Revoke_Cannot_Resumption					0xDC010603	//	(HISECUREPARSING | CHTIN | CERTREVOKLIST | 0x03)
+#define	Invalid_Delta_CRL							0xDC010604	//	(HISECUREPARSING | CHTIN | CERTREVOKLIST | 0x04)
+
+#define	Input_CRLPathName_Error						0xDC010611	//	(HISECUREPARSING | CHTIN | CERTREVOKLIST | 0x11)
+
+#define	CRL_Index_False								0xDC010801	//	(HISECUREPARSING | CHTIN | COUNT | 0x01)
+
+//Transform Error
+#define	Cert_To_DerCode_Error						0xDC050501	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x01)
+#define	Cert_Signature_To_DerCode_Error				0xDC050502	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x02)
+#define	tbsCert_To_DerCode_Error					0xDC050503	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x03)
+#define	tbsCACert_To_DerCode_Error					0xDC050504	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x04)
+#define	CRL_Signature_To_DerCode_Error				0xDC050505	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x05)
+#define	tbsCRL_To_DerCode_Error						0xDC050506	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x06)
+#define	tbsDeSequence_To_DerCode_Error				0xDC050507	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x07)
+#define	CRL_To_DerCode_Error						0xDC050508	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x08)
+#define	Extension_To_DerCode_Error					0xDC050509	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x09)
+#define	SubExtension_To_DerCode_Error				0xDC05050A	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x0A)
+#define	OctetString_To_DerCode_Error				0xDC05050B	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x0B)
+#define	AlgoID_To_DerCode_Error						0xDC05050C	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x0C)
+#define	BitString_To_DerCode_Error					0xDC05050D	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x0D)
+#define	Data_To_DerCode_Error						0xDC05050E	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x0E)
+
+#define DerCode_To_Extensions_Error					0xDC050511	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x11)
+#define	DerCode_To_SDAs_Error						0xDC050512	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x12)
+#define	DerCode_To_OID_Error						0xDC050513	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x13)
+#define	DerCode_To_CRL_Error						0xDC050514	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x14)
+#define	DerCode_To_tbsCert_Error					0xDC050515	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x15)
+#define	DerCode_To_tbsCACert_Error					0xDC050516	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x16)
+#define	DerCode_To_tbsCRL_Error						0xDC050517	//	(HISECUREPARSING | GETDETAIL | TRANSFORM | 0x17)
+
+//GetCRLRecoreMessage
+#define	CRL_NO_RECORD								0xDC030501	//	(HISECUREPARSING | PROGRAM | FORMAT | 0x01)
+
+//UnSupport Algorithm
+#define	UnSupported_Cert_Signature_Algorithm		0xDC031101	//	(HISECUREPARSING | PROGRAM | UNSUPPORT | 0x01)
+#define	UnSupported_Crl_Signature_Algorithm			0xDC031102	//	(HISECUREPARSING | PROGRAM | UNSUPPORT | 0x02)
+
+//Function Failure
+#define	Verify_Cert_Signature_Failed				0xDC031501	//	(HISECUREPARSING | PROGRAM | FUNCTIONFAIL | 0x01)
+#define	Verify_CRL_Signature_Failed					0xDC031502	//	(HISECUREPARSING | PROGRAM | FUNCTIONFAIL | 0x02)
+
+
+// CryptoAPI 相關	0xDB000000
+// Input			0xDB010000
+// In/Out			0xDB020000
+// Program			0xDB030000
+// Transform		0xDB040000
+
+
+#define	Incorrect_ModuleHandle						0xDB010001	//	(HISECURECRYPTOAPI | CHTIN | 0x01)
+#define	DLL_File_Not_Found							0xDB010002	//	(HISECURECRYPTOAPI | CHTIN | 0x02)
+#define	Session_Flag_Set_Error						0xDB010003	//	(HISECURECRYPTOAPI | CHTIN | 0x03)
+#define	Choice_One_WaytoGet_KeyHandle				0xDB010004	//	(HISECURECRYPTOAPI | CHTIN | 0x04)
+
+
+			
+//	Length Error												
+#define	DataLength_Less_Than_One					0xDB010101	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x01)
+#define	UserPinLength_Less_Than_One					0xDB010102	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x02)
+#define	DataBeforeSignLength_Less_Than_One			0xDB010103	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x03)
+#define	SignatureLength_Less_Than_One				0xDB010104	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x04)
+#define	PlainDataLength_Less_Than_One				0xDB010105	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x05)
+#define	CipherDataLength_Less_Than_One				0xDB010106	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x06)
+#define	ParaLength_Less_Than_One					0xDB010107	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x07)
+#define	Password_Length_Incorrect					0xDB010108	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x08)
+
+#define	UserPin_Length_Must_Be_Zero					0xDB010111	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x11)
+
+#define	Over_Max_BeforeSignedDataLength				0xDB010121	//	(HISECURECRYPTOAPI | CHTIN | LENGTH | 0x21)
+
+// Uninitialized Pointer
+#define	Uninitialized_Pointer_Of_ModuleName			0xDB010201	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x01)
+#define	Uninitialized_Pointer_Of_UserPin			0xDB010202	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x02)
+#define	Uninitialized_Pointer_Of_DataBeforeSign		0xDB010203	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x03)
+#define	Uninitialized_Pointer_Of_PlainData			0xDB010204	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x04)
+#define	Uninitialized_Pointer_Of_Signature			0xDB010205	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x05)
+#define	Uninitialized_Pointer_Of_CipherData			0xDB010206	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x06)
+#define	Uninitialized_Pointer_Of_HashData			0xDB010207	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x07)
+#define	Uninitialized_Pointer_Of_IniVector			0xDB010208	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x08)
+#define	Uninitialized_Pointer_Of_Data				0xDB010209	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x09)	
+#define	Uninitialized_Pointer_Of_Para				0xDB01020A	//	(HISECURECRYPTOAPI | CHTIN | POINTER | 0x0A)
+
+#define Uninitialized_Pointer_Of_HashDataLength		0xDB020201	//	(HISECURECRYPTOAPI | CHTINOUT | POINTER | 0x01)	
+#define	Uninitialized_Pointer_Of_SignatureLength	0xDB020202	//	(HISECURECRYPTOAPI | CHTINOUT | POINTER | 0x02)
+#define	Uninitialized_Pointer_Of_CipherDataLength	0xDB020203	//	(HISECURECRYPTOAPI | CHTINOUT | POINTER | 0x03)
+#define	Uninitialized_Pointer_Of_PlainDataLength	0xDB020204	//	(HISECURECRYPTOAPI | CHTINOUT | POINTER | 0x14)
+#define	Uninitialized_Pointer_Of_CardATRLength		0xDB020205	//	(HISECURECRYPTOAPI | CHTINOUT | POINTER | 0x15)
+
+
+// NULL Pointer
+#define	NULL_Pointer_To_ModuleName					0xDB010301	//	(HISECURECRYPTOAPI | CHTIN | NULLPOINTER | 0x01)
+#define	NULL_Pointer_To_Data						0xDB010302	//	(HISECURECRYPTOAPI | CHTIN | NULLPOINTER | 0x02)
+#define	NULL_Pointer_To_DataBeforeSign				0xDB010303	//	(HISECURECRYPTOAPI | CHTIN | NULLPOINTER | 0x03)
+#define	NULL_Pointer_To_Signature					0xDB010304	//	(HISECURECRYPTOAPI | CHTIN | NULLPOINTER | 0x04)
+#define	NULL_Pointer_To_PlainData					0xDB010305	//	(HISECURECRYPTOAPI | CHTIN | NULLPOINTER | 0x05)
+#define	NULL_Pointer_To_CipherData					0xDB010306	//	(HISECURECRYPTOAPI | CHTIN | NULLPOINTER | 0x06)
+
+
+// 卡片相關
+#define	Input_Error_Card_Pin_First					0xDB011201	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x01)
+#define	Input_Error_Card_Pin_Second					0xDB011202	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x02)
+#define	Input_Error_Card_Pin_Third					0xDB011203	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x03)
+#define	Smard_Card_Pin_Is_Locked					0xDB011204	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x04)
+#define	No_Cert_Found								0xDB011205	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x05)
+#define	Do_Not_Input_Smart_Card						0xDB011206	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x06)
+#define	Select_Smart_Card_Failed					0xDB011207	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x07)
+#define	p11OpenSession_Failed						0xDB011208	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x08)
+#define P11CloseSessionAndFinalize_Failed			0xDB011209	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x09)
+	
+#define	SCardEstablishContext_Error					0xDB011211	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x11)
+#define	SCardGetAttrib_Error						0xDB011212	//	(HISECURECRYPTOAPI | CHTIN | ICCARD | 0x12)
+// Key相關
+#define	Non_Finding_Key_Object						0xDB011401	//	(HISECURECRYPTOAPI | CHTIN | KEYOBJECT | 0x01)	
+#define	Non_Unique_Key_Object						0xDB011402	//	(HISECURECRYPTOAPI | CHTIN | KEYOBJECT | 0x02)
+#define InCorrect_KeyType							0xDB011403	//	(HISECURECRYPTOAPI | CHTIN | KEYOBJECT | 0x03)
+
+
+//	讀卡機相關
+#define	Smard_Reader_Install_Question				0xDB041201	//	(HISECURECRYPTOAPI | SYSTEM | ICCARD | 0x01)
+//	SmartCard_Resource_Manager系統相關
+#define SmartCard_Resource_Manager_Not_Running		0xDB041202	//	(HISECURECRYPTOAPI | SYSTEM | ICCARD | 0x02)
+
+
+//	運算過程錯誤
+#define	MakeSignature_Process_Failed				0xDB051601	//	(HISECURECRYPTOAPI | GETDETAIL | PROCESS | 0x01)
+#define	VerifySignature_Process_Failed				0xDB051602	//	(HISECURECRYPTOAPI | GETDETAIL | PROCESS | 0x02)
+#define	ASEncrypt_Process_Failed					0xDB051603	//	(HISECURECRYPTOAPI | GETDETAIL | PROCESS | 0x03)
+#define	ASDecrypt_Process_Failed					0xDB051604	//	(HISECURECRYPTOAPI | GETDETAIL | PROCESS | 0x04)
+#define	SymEncrypt_Process_Failed					0xDB051605	//	(HISECURECRYPTOAPI | GETDETAIL | PROCESS | 0x05)
+#define	SymDecrypt_Process_Failed					0xDB051606	//	(HISECURECRYPTOAPI | GETDETAIL | PROCESS | 0x06)
+
+
+//	中華電信SAFEGUARD相關
+#define	Invalid_INI_File							0xDB031301	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x01)			
+#define	Invalid_INI_File_Port						0xDB031302	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x02)
+#define	Invalid_INI_File_KeyID						0xDB031303	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x03)	
+#define	Invalid_INI_File_KeyLength					0xDB031304	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x04)
+#define	Invalid_INI_File_Notfound					0xDB031305	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x05)			
+#define	Invalid_INI_File_Session					0xDB031306	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x06)
+#define	Invalid_INI_File_SAMKeyLen					0xDB031307	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x07)
+
+#define	Failed_GetSamkey_Func						0xDB031311	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x11)
+#define	Failed_GetSAMPlainRead_From_Card			0xDB031312	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x12)
+#define	Not_Find_SAMPlainRead_Function				0xDB031313	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x13)
+#define	Can_Not_Find_HW15_DLL						0xDB031314	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x14)
+
+#define	Invalid_DecPKCS5_Pin						0xDB031321	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x21)
+#define INIFile_Initialize_Failed					0xDB031322	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x22)
+#define	PvkToken_Sign_Failed						0xDB031323	//	(HISECURECRYPTOAPI | PROGRAM | SAFEGUARD | 0x23)
+
+#define	PBDFunction_Input_Data_Error				0xDB011301	//	(HISECURECRYPTOAPI | CHTIN | SAFEGUARD | 0x01)
+
+//	網路相關
+#define ERR_CANT_MALLOC								0xDD040001	//	HISECURENETFUNC | SYSTEM | 0x01)
+#define ERR_SENDING_DATA							0xDD040002	//	(HISECURENETFUNC | SYSTEM | 0x02)
+#define ERR_INITIALIZING							0xDD040003	//	(HISECURENETFUNC | SYSTEM | 0x03)
+#define ERR_VER_NOT_SUPPORTED						0xDD040004	//	(HISECURENETFUNC | SYSTEM | 0x04)
+#define ERR_EINVAL									0xDD040005	//	(HISECURENETFUNC | SYSTEM | 0x05)
+#define ERR_SYS_NOT_READY							0xDD040006	//	(HISECURENETFUNC | SYSTEM | 0x06)
+#define ERR_CANT_RESOLVE_HOSTNAME					0xDD040007	//	(HISECURENETFUNC | SYSTEM | 0x07)
+#define ERR_CANT_GET_SOCKET							0xDD040008	//	(HISECURENETFUNC | SYSTEM | 0x08)
+#define ERR_READING_SOCKET							0xDD040009	//	(HISECURENETFUNC | SYSTEM | 0x09)
+#define ERR_NOT_A_SOCKET							0xDD04000A	//	(HISECURENETFUNC | SYSTEM | 0x0A)
+#define ERR_BUSY									0xDD04000B	//	(HISECURENETFUNC | SYSTEM | 0x0B)
+#define ERR_CLOSING									0xDD04000C	//	(HISECURENETFUNC | SYSTEM | 0x0C)
+#define WAIT_A_BIT									0xDD04000D	//	(HISECURENETFUNC | SYSTEM | 0x0D)
+#define ERR_CANT_RESOLVE_SERVICE					0xDD04000E	//	(HISECURENETFUNC | SYSTEM | 0x0E)
+#define ERR_CANT_CONNECT							0xDD04000F	//	(HISECURENETFUNC | SYSTEM | 0x0F)
+#define ERR_NOT_CONNECTED							0xDD040010	//	(HISECURENETFUNC | SYSTEM | 0x10)
+#define ERR_CONNECTION_REFUSED						0xDD040011	//	(HISECURENETFUNC | SYSTEM | 0x11)
+
+#define	INIT_WINSOCK_FAILED							0xDD040031	//	(HISECURENETFUNC | SYSTEM | 0x31)
+#define	GET_CONNECTED_FAILED						0xDD040032	//	(HISECURENETFUNC | SYSTEM | 0x32)
+	
+//OCSP回應資料錯誤
+#define	OCSPRESPONSE_FORMAT_ERROR					0xDD030501	//	(HISECURENETFUNC | PROGRAM | FORMAT | 0x01)
+
+//	Length Error
+#define	Nounce_Length_Not_Match						0xDD010101	//	(HISECURENETFUNC | CHTIN | Length | 0x01)
+
+//	COUNT Error												
+#define	Request_Count_More_Than_One					0xDD010801	//	(HISECURENETFUNC | CHTIN | COUNT | 0x01)
+
+
+//GPKI Card Function ERROR
+#define E_NOT_LOAD_DLL								0x00007301
+#define	E_NOT_SUPPORT_FUNCTION						0x00007302
+#define	E_SLOT										0x00007303
+
+//PKCS11 ERROR CODE
+#define CHT_CKR_OK									0x00000000
+#define CHT_CKR_CANCEL								0x00000001
+#define CHT_CKR_HOST_MEMORY							0x00000002
+#define CHT_CKR_SLOT_ID_INVALID						0x00000003
+
+/* CKR_FLAGS_INVALID was removed for v2.0 */
+
+/* CKR_GENERAL_ERROR and CKR_FUNCTION_FAILED are new for v2.0 */
+#define CHT_CKR_GENERAL_ERROR						0x00000005
+#define CHT_CKR_FUNCTION_FAILED						0x00000006
+
+/* CKR_ARGUMENTS_BAD, CKR_NO_EVENT, CKR_NEED_TO_CREATE_THREADS,
+ * and CKR_CANT_LOCK are new for v2.01 */
+#define CHT_CKR_ARGUMENTS_BAD						0x00000007
+#define CHT_CKR_NO_EVENT							0x00000008
+#define CHT_CKR_NEED_TO_CREATE_THREADS				0x00000009
+#define CHT_CKR_CANT_LOCK							0x0000000A
+
+#define CHT_CKR_ATTRIBUTE_READ_ONLY					0x00000010
+#define CHT_CKR_ATTRIBUTE_SENSITIVE					0x00000011
+#define CHT_CKR_ATTRIBUTE_TYPE_INVALID			    0x00000012
+#define CHT_CKR_ATTRIBUTE_VALUE_INVALID				0x00000013
+#define CHT_CKR_DATA_INVALID						0x00000020
+#define CHT_CKR_DATA_LEN_RANGE					    0x00000021
+#define CHT_CKR_DEVICE_ERROR						0x00000030
+#define CHT_CKR_DEVICE_MEMORY						0x00000031
+#define CHT_CKR_DEVICE_REMOVED				        0x00000032
+#define CHT_CKR_ENCRYPTED_DATA_INVALID			    0x00000040
+#define CHT_CKR_ENCRYPTED_DATA_LEN_RANGE			0x00000041
+#define CHT_CKR_FUNCTION_CANCELED				    0x00000050
+#define CHT_CKR_FUNCTION_NOT_PARALLEL				0x00000051
+
+/* CKR_FUNCTION_NOT_SUPPORTED is new for v2.0 */
+#define CHT_CKR_FUNCTION_NOT_SUPPORTED				0x00000054
+
+#define CHT_CKR_KEY_HANDLE_INVALID					0x00000060
+
+/* CKR_KEY_SENSITIVE was removed for v2.0 */
+
+#define CHT_CKR_KEY_SIZE_RANGE						0x00000062
+#define CHT_CKR_KEY_TYPE_INCONSISTENT				0x00000063
+
+/* CKR_KEY_NOT_NEEDED, CKR_KEY_CHANGED, CKR_KEY_NEEDED,
+ * CKR_KEY_INDIGESTIBLE, CKR_KEY_FUNCTION_NOT_PERMITTED,
+ * CKR_KEY_NOT_WRAPPABLE, and CKR_KEY_UNEXTRACTABLE are new for
+ * v2.0 */
+#define CHT_CKR_KEY_NOT_NEEDED						0x00000064
+#define CHT_CKR_KEY_CHANGED							0x00000065
+#define CHT_CKR_KEY_NEEDED					        0x00000066
+#define CHT_CKR_KEY_INDIGESTIBLE				    0x00000067
+#define CHT_CKR_KEY_FUNCTION_NOT_PERMITTED			0x00000068
+#define CHT_CKR_KEY_NOT_WRAPPABLE				    0x00000069
+#define CHT_CKR_KEY_UNEXTRACTABLE					0x0000006A
+
+#define CHT_CKR_MECHANISM_INVALID				    0x00000070
+#define CHT_CKR_MECHANISM_PARAM_INVALID				0x00000071
+
+/* CKR_OBJECT_CLASS_INCONSISTENT and CKR_OBJECT_CLASS_INVALID
+ * were removed for v2.0 */
+#define CHT_CKR_OBJECT_HANDLE_INVALID		        0x00000082
+#define CHT_CKR_OPERATION_ACTIVE				    0x00000090
+#define CHT_CKR_OPERATION_NOT_INITIALIZED			0x00000091
+#define CHT_CKR_PIN_INCORRECT					    0x000000A0
+#define CHT_CKR_PIN_INVALID							0x000000A1
+#define CHT_CKR_PIN_LEN_RANGE				        0x000000A2
+
+/* CKR_PIN_EXPIRED and CKR_PIN_LOCKED are new for v2.0 */
+#define CHT_CKR_PIN_EXPIRED						    0x000000A3
+#define CHT_CKR_PIN_LOCKED							0x000000A4
+
+#define CHT_CKR_SESSION_CLOSED				        0x000000B0
+#define CHT_CKR_SESSION_COUNT					    0x000000B1
+#define CHT_CKR_SESSION_HANDLE_INVALID				0x000000B3
+#define CHT_CKR_SESSION_PARALLEL_NOT_SUPPORTED		0x000000B4
+#define CHT_CKR_SESSION_READ_ONLY					0x000000B5
+#define CHT_CKR_SESSION_EXISTS				        0x000000B6
+
+/* CKR_SESSION_READ_ONLY_EXISTS and
+ * CKR_SESSION_READ_WRITE_SO_EXISTS are new for v2.0 */
+#define CHT_CKR_SESSION_READ_ONLY_EXISTS		    0x000000B7
+#define CHT_CKR_SESSION_READ_WRITE_SO_EXISTS		0x000000B8
+
+#define CHT_CKR_SIGNATURE_INVALID					0x000000C0
+#define CHT_CKR_SIGNATURE_LEN_RANGE			        0x000000C1
+#define CHT_CKR_TEMPLATE_INCOMPLETE				    0x000000D0
+#define CHT_CKR_TEMPLATE_INCONSISTENT				0x000000D1
+#define CHT_CKR_TOKEN_NOT_PRESENT				    0x000000E0
+#define CHT_CKR_TOKEN_NOT_RECOGNIZED				0x000000E1
+#define CHT_CKR_TOKEN_WRITE_PROTECTED			    0x000000E2
+#define CHT_CKR_UNWRAPPING_KEY_HANDLE_INVALID		0x000000F0
+#define CHT_CKR_UNWRAPPING_KEY_SIZE_RANGE			0x000000F1
+#define CHT_CKR_UNWRAPPING_KEY_TYPE_INCONSISTENT	0x000000F2
+#define CHT_CKR_USER_ALREADY_LOGGED_IN				0x00000100
+#define CHT_CKR_USER_NOT_LOGGED_IN			        0x00000101
+#define CHT_CKR_USER_PIN_NOT_INITIALIZED		    0x00000102
+#define CHT_CKR_USER_TYPE_INVALID					0x00000103
+
+/* CKR_USER_ANOTHER_ALREADY_LOGGED_IN and CKR_USER_TOO_MANY_TYPES
+ * are new to v2.01 */
+#define CHT_CKR_USER_ANOTHER_ALREADY_LOGGED_IN		0x00000104
+#define CHT_CKR_USER_TOO_MANY_TYPES					0x00000105
+
+#define CHT_CKR_WRAPPED_KEY_INVALID					0x00000110
+#define CHT_CKR_WRAPPED_KEY_LEN_RANGE		        0x00000112
+#define CHT_CKR_WRAPPING_KEY_HANDLE_INVALID		    0x00000113
+#define CHT_CKR_WRAPPING_KEY_SIZE_RANGE				0x00000114
+#define CHT_CKR_WRAPPING_KEY_TYPE_INCONSISTENT		0x00000115
+#define CHT_CKR_RANDOM_SEED_NOT_SUPPORTED			0x00000120
+
+/* These are new to v2.0 */
+#define CHT_CKR_RANDOM_NO_RNG						0x00000121
+#define CHT_CKR_BUFFER_TOO_SMALL				    0x00000150
+#define CHT_CKR_SAVED_STATE_INVALID					0x00000160
+#define CHT_CKR_INFORMATION_SENSITIVE		        0x00000170
+#define CHT_CKR_STATE_UNSAVEABLE				    0x00000180
+
+/* These are new to v2.01 */
+#define CHT_CKR_CRYPTOKI_NOT_INITIALIZED			0x00000190
+#define CHT_CKR_CRYPTOKI_ALREADY_INITIALIZED		0x00000191
+#define CHT_CKR_MUTEX_BAD							0x000001A0
+#define CHT_CKR_MUTEX_NOT_LOCKED					0x000001A1
+
+#endif
