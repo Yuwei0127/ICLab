@@ -8,7 +8,7 @@ namespace ICLab.Models
 {
 
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-    public class ICSDataModel
+    public class ICSDATA
     {
         /// <summary>
         /// 客戶端憑證姆指紋識別碼
@@ -41,6 +41,6 @@ namespace ICLab.Models
         /// <summary>
         /// SNPIDData
         /// </summary>
-        public IEnumerable<SNPIDDataModel> lpSNPID;
+        public IEnumerable<SNPID> lpSNPID;
     }
 }

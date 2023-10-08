@@ -41,7 +41,7 @@ namespace ICLab.Service
         
         // 聲明iMake_ICSReqPKT函式
         [DllImport("D:\\Side Project\\WebSite\\ICLab\\ICLab\\ICSCDLL.dll", CallingConvention = CallingConvention.StdCall)]
-        public static extern int iMake_ICSReqPKT(int iSeed, string szClientCerFN, ICSDataModel lpRawICSData, ref int iRetPKTLength, out IntPtr szRetPKT);
+        public static extern int iMake_ICSReqPKT(int iSeed, char szClientCerFN, ICSDATA lpRawICSData, ref int iRetPKTLength, out IntPtr szRetPKT);
 
         public static void GetInfo()
         {
@@ -49,16 +49,16 @@ namespace ICLab.Service
             var seed = 12345;
             var iSeed = BuildSeed(seed);
 
-            var dataModel = new ICSDataModel
+            var dataModel = new ICSDATA
             {
                 _ClientID = "1C6750177E3BB860C1E2B55B635AE48ED00096FE",
                 _Nonce = iSeed,
                 _DateTime = dateTimeNow,
                 _Result = 0,
                 Count = 1,
-                lpSNPID = new List<SNPIDDataModel>()
+                lpSNPID = new List<SNPID>()
                 {
-                    new SNPIDDataModel
+                    new SNPID
                     {
                         SN = "1531302232730052",
                         PID = "F229537342",
@@ -78,12 +78,12 @@ namespace ICLab.Service
 
                 var iRetPKTLength = 0;
 
-                int result = iMake_ICSReqPKT(seed, 憑證指紋, dataModel, ref iRetPKTLength, out IntPtr szRetPKT);
+                int result = iMake_ICSReqPKT(seed, 'x', dataModel, ref iRetPKTLength, out IntPtr szRetPKT);
 
                 // 處理 result、arg4 和 arg5 的返回值
 
                 // 如果需要，將返回的 IntPtr 轉換回 ICSDataModel
-                ICSDataModel returnedDataModel = Marshal.PtrToStructure<ICSDataModel>(szRetPKT);
+                ICSDATA returnedDataModel = Marshal.PtrToStructure<ICSDATA>(szRetPKT);
 
                 // 釋放內存
                 // Marshal.FreeHGlobal(dataModelPtr);

@@ -8,7 +8,7 @@ namespace ICLab.Models
 {
 
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-    public class SNPIDDataModel
+    public class SNPID
     {
         /// <summary>
         /// 16碼DN序號
