@@ -516,6 +516,12 @@
     <Content Include="Common\HISECURE_CryptoModule\MFC42D.DLL" />
     <Content Include="Common\HISECURE_CryptoModule\MFCO42D.DLL" />
     <Content Include="Common\HISECURE_CryptoModule\MSVCRTD.DLL" />
+    <Content Include="Common\ISCSDLLs\20130108_12345678.pfx" />
+    <Content Include="Common\ISCSDLLs\cert_SHA1.cer" />
+    <Content Include="Common\ISCSDLLs\ICSCDLL.dll" />
+    <Content Include="Common\ISCSDLLs\ICSCDLL.lib" />
+    <Content Include="Common\ISCSDLLs\libeay32.dll" />
+    <Content Include="Common\ISCSDLLs\SSLeay32.dll" />
     <Content Include="Common\UserDataExample.json" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -536,9 +542,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="ICSCDLL.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -685,6 +688,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\ISCSDLLs\ICSCDLL.h" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

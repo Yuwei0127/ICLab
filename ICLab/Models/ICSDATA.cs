@@ -41,6 +41,6 @@ namespace ICLab.Models
         /// <summary>
         /// SNPIDData
         /// </summary>
-        public IEnumerable<SNPID> lpSNPID;
+        public SNPID[] lpSNPID;
     }
 }

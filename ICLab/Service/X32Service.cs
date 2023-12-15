@@ -56,8 +56,7 @@ namespace ICLab.Service
                 _DateTime = dateTimeNow,
                 _Result = 0,
                 Count = 1,
-                lpSNPID = new List<SNPID>()
-                {
+                lpSNPID = new [] {
                     new SNPID
                     {
                         SN = "1531302232730052",

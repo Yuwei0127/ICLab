@@ -1,15 +1,8 @@
 ﻿using ICLab.ICSC;
 using ICLab.Models;
-using ICLab.Service;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Web;
-using System.Web.Http.Results;
+using System.Security.Cryptography.X509Certificates;
 using System.Web.Mvc;
 
 namespace ICLab.Controllers
@@ -19,48 +12,57 @@ namespace ICLab.Controllers
 
         public ActionResult Index()
         {
-            string szClientCerFN = "1C6750177E3BB860C1E2B55B635AE48ED00096FE"; // 客戶端證書文件名稱
-            var dateTimeNow = DateTime.Now.ToString("yyyyMMddhhmmss");
+            // string szClientCerFN = "20130108_12345678.pfx"; // 客戶端證書文件名稱
+            var szClientCerFN = "MOICA.cer";
+            
+            // var dateTimeNow = DateTime.Now.ToString("yyyyMMddhhmmss");
             var iSeed = 12345;
-            var _Nonce = BuildSeed(iSeed);
+            // var _Nonce = BuildSeed(iSeed);
 
             var lpRawICSData = new ICSDATA
             {
-                _ClientID = "1C6750177E3BB860C1E2B55B635AE48ED00096FE",
-                _Nonce = _Nonce,
-                _DateTime = dateTimeNow,
-                _Result = 0,
+                // _ClientID = "1C6750177E3BB860C1E2B55B635AE48ED00096FE",
+                // _Nonce = _Nonce,
+                // _DateTime = dateTimeNow,
+                // _Result = 0,
                 Count = 1,
-                lpSNPID = new List<SNPID>()
-                {
+                lpSNPID = new [] {
                     new SNPID
                     {
                         SN = "1531302232730052",
-                        PID = "F229537342",
-                        _Code = 0
+                        PID = "F229537342"
+                        //_Code = 0
                     }
                 }
             };
 
-
-            int iRetPKTLength = 0;
+            // FindCertificatePath("1C6750177E3BB860C1E2B55B635AE48ED00096FE");
+            
+            int iRetPKTLength = 1024;
             // IntPtr szRetPKT = IntPtr.Zero; 
 
-            int bufferSize = 1024; // 假設資料大小為 100 個字節
+            int bufferSize = 1024;
             IntPtr szRetPKT = Marshal.AllocHGlobal(bufferSize);
 
-            // 調用C語言函數，傳遞ICSDATA結構的實例
-            int result = ICSCService.iMake_ICSReqPKT(iSeed, szClientCerFN, ref lpRawICSData, ref iRetPKTLength, ref szRetPKT);
-
-            // 處理結果和szRetPKT（根據需要）
-
-            // 釋放szRetPKT（如果需要的話）
-            if (szRetPKT != IntPtr.Zero)
+            try
             {
-                Marshal.FreeCoTaskMem(szRetPKT);
+                // 調用 C 函數，傳遞 ICSDATA 結構
+                int result = ICSCService.iMake_ICSReqPKT(iSeed, szClientCerFN, ref lpRawICSData, ref iRetPKTLength, ref szRetPKT);
+
+                // 處理結果和 szRetPKT
+
+                // 釋放szRetPKT
+                if (szRetPKT != IntPtr.Zero)
+                {
+                    Marshal.FreeCoTaskMem(szRetPKT);
+                }
+                
             }
-
-
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
 
             return View();
         }
@@ -79,5 +81,6 @@ namespace ICLab.Controllers
 
             return nonce;
         }
+        
     }
 }
