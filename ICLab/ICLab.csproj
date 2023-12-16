@@ -161,7 +161,6 @@
     <Compile Include="Service\CardService.cs" />
     <Compile Include="Service\ICLabs.cs" />
     <Compile Include="Service\ICService.cs" />
-    <Compile Include="Service\X32Service.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Common\DevelopData\ChtICToken.js" />
@@ -523,6 +522,7 @@
     <Content Include="Common\ISCSDLLs\libeay32.dll" />
     <Content Include="Common\ISCSDLLs\SSLeay32.dll" />
     <Content Include="Common\UserDataExample.json" />
+    <Content Include="Common\UserDataExample2.json" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />

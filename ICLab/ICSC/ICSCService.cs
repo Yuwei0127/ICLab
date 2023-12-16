@@ -15,9 +15,9 @@ namespace ICLab.ICSC
         public static extern int iMake_ICSReqPKT(
         int iSeed,
         string szClientCerFN,
-        ref ICSDATA lpRawICSData,
+        ref IntPtr lpRawICSData,
         ref int iRetPKTLength,
-        ref IntPtr szRetPKT
+        out IntPtr szRetPKT
     );
     }
 }

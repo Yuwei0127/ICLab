@@ -7,8 +7,8 @@ using System.Web;
 namespace ICLab.Models
 {
 
-    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-    public class ICSDATA
+    [StructLayout(LayoutKind.Sequential,Pack = 1,CharSet = CharSet.Ansi)]
+    public struct ICSDATA
     {
         /// <summary>
         /// 客戶端憑證姆指紋識別碼
@@ -41,6 +41,7 @@ namespace ICLab.Models
         /// <summary>
         /// SNPIDData
         /// </summary>
-        public SNPID[] lpSNPID;
+        // 使用 IntPtr 來表示指標
+        public IntPtr lpSNPID;
     }
 }

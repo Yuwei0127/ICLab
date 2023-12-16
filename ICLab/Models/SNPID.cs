@@ -7,8 +7,8 @@ using System.Web;
 namespace ICLab.Models
 {
 
-    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-    public class SNPID
+    [StructLayout(LayoutKind.Sequential,Pack = 1,CharSet = CharSet.Ansi)]
+    public struct SNPID
     {
         /// <summary>
         /// 16碼DN序號
